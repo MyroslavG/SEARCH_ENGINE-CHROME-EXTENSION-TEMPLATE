@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const userInput = searchInput.value.trim();
 
         // Make an AJAX request to Flask route /search
-        fetch("/search", {
+        fetch("https://intense-inlet-78420-ef41387163cb.herokuapp.com/search", {
             method: "POST",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded",
