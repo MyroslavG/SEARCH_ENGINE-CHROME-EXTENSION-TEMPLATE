@@ -1,0 +1,11 @@
+{
+    "name": "SEARCH-TEMPLATE",
+    "version": "1.0.0",
+    "description": "allows users to search through objects in a database",
+    "manifest_version": 3,
+    "author": "Myroslav Vozniak",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "SEARCH"
+    }
+}
