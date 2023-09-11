@@ -18,7 +18,7 @@ class Movie(db.Model):
 
 @app.route('/')
 def home():
-    return render_template('popup.html')
+    return render_template('index.html')
 
 @app.route('/search', methods=['GET', 'POST'])
 @cross_origin()
