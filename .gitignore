@@ -1,4 +1,4 @@
-site.db
+/static/site.db
 /ext/index.html
 /ext/manifest.json
 /ext/popup.js
