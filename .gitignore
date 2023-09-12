@@ -2,3 +2,4 @@
 /ext/index.html
 /ext/manifest.json
 /ext/popup.js
+.env

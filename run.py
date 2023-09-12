@@ -1,13 +1,21 @@
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS, cross_origin
 from flask_sqlalchemy import SQLAlchemy
+import os
 
 app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///site.db"
+load_dotenv()
+
+DB_USERNAME = os.getenv('DB_USERNAME')
+DB_PASSWORD = os.getenv('DB_PASSWORD')
+DB_HOST = os.getenv('DB_HOST')
+DB_NAME = os.getenv('DB_NAME')
+app.config['SQLALCHEMY_DATABASE_URI'] = f"mysql://{DB_USERNAME}:{DB_PASSWORD}@{DB_HOST}/{DB_NAME}"
 db = SQLAlchemy(app)
+migrate = Migrate(app, db)
 
 class Movie(db.Model):
     id = db.Column(db.Integer, primary_key=True)
