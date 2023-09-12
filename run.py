@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS, cross_origin
 from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
+from dotenv import load_dotenv
 import os
 
 app = Flask(__name__)
