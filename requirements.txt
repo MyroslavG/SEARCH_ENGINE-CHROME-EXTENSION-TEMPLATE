@@ -6,3 +6,7 @@ flask-cors
 flask_sqlalchemy
 flask_migrate
 python-dotenv
+sqlalchemy
+alembic
+mysqlclient
+mysql-connector-python
