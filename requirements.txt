@@ -4,3 +4,4 @@ gunicorn
 jsonify
 flask-cors
 flask_sqlalchemy
+flask_migrate
